@@ -43,12 +43,12 @@ public class UserController {
     
     private final UserRepository userRepository;
     
-    @PostMapping(path = "register")
+    @PostMapping()
     public String register (@RequestBody RegistrationRequest request){
         return registrationService.register(request);
     }
 
-    @PostMapping("/login")
+    @PostMapping(path = "login")
 	public ResponseEntity<?> login(@RequestBody RequestAuthentication authenticationRequest) throws InvalidKeySpecException, NoSuchAlgorithmException {
 
 		final Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
