@@ -30,7 +30,7 @@ import com.example.nexgel.model.User;
 import lombok.AllArgsConstructor;
 
 @RestController
-@RequestMapping(path = "api")
+@RequestMapping(path = "api/register")
 @AllArgsConstructor
 public class UserController {
 
@@ -43,7 +43,7 @@ public class UserController {
     
     private final UserRepository userRepository;
     
-    @PostMapping(path = "/register")
+    @PostMapping()
     public String register (@RequestBody RegistrationRequest request){
         return registrationService.register(request);
     }
