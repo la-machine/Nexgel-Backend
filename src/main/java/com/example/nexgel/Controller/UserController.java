@@ -37,7 +37,7 @@ public class UserController {
     @Autowired
 	private AuthenticationManager authenticationManager;
     @Autowired
-	private JWTTokenHelper jWTTokenHelper;
+	JWTTokenHelper jWTTokenHelper;
     
     private final RegistrationService registrationService;
     
