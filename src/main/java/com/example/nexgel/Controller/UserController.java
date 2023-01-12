@@ -66,7 +66,7 @@ public class UserController {
 		return ResponseEntity.ok(response);
 	}
 
-    @GetMapping(path = "/listuser")
+    @GetMapping(path = "listuser")
     public List<User> GetAllUser(@RequestParam("token") String token){
         return userRepository.findAll();
     }
