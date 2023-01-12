@@ -22,7 +22,13 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 
-    private final UserService userService;
+    @Autowired
+    private UserService userService;
+    @Autowired
+	private JWTTokenHelper jWTTokenHelper;
+    @Autowired
+	private AuthenticationEntryPoint authenticationEntryPoint;
+
     private final BCryptPasswordEncoder passwordEncoder;
 
     
