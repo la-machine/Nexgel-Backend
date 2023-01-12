@@ -1,6 +1,7 @@
 package com.example.nexgel.Security;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpMethod;
 import org.apache.catalina.authenticator.SpnegoAuthenticator.AuthenticateAction;
 import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
 import org.springframework.context.annotation.Bean;
