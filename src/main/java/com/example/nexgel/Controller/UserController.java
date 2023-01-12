@@ -30,7 +30,7 @@ import com.example.nexgel.model.User;
 import lombok.AllArgsConstructor;
 
 @RestController
-@RequestMapping(path = "api/register")
+@RequestMapping(path = "api")
 @AllArgsConstructor
 public class UserController {
 
@@ -43,12 +43,12 @@ public class UserController {
     
     private final UserRepository userRepository;
     
-    @PostMapping()
+    @PostMapping(path = "register")
     public String register (@RequestBody RegistrationRequest request){
         return registrationService.register(request);
     }
 
-    @PostMapping("/login")
+    @PostMapping(path = "login")
 	public ResponseEntity<?> login(@RequestBody RequestAuthentication authenticationRequest) throws InvalidKeySpecException, NoSuchAlgorithmException {
 
 		final Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
